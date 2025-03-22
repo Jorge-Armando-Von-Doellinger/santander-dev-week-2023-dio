@@ -9,9 +9,12 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(23)
+		languageVersion.set(JavaLanguageVersion.of(23))
 	}
 }
+
+
+
 
 configurations {
 	compileOnly {
@@ -22,6 +25,7 @@ configurations {
 repositories {
 	mavenCentral()
 }
+
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -43,6 +47,9 @@ tasks.jar {
 	}
 }
 
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+
