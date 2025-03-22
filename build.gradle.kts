@@ -10,6 +10,7 @@ version = "0.0.1-SNAPSHOT"
 java {
 	toolchain {
 		languageVersion.set(JavaLanguageVersion.of(23))
+
 	}
 }
 
@@ -30,6 +31,11 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	implementation("org.hibernate.validator:hibernate-validator:8.0.1.Final")
+	implementation("org.glassfish:jakarta.el:4.0.2") // EL é necessário para Hibernate Validator
+
+
 
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
 
